@@ -27,6 +27,8 @@
 | price          | integer    | null: false       |
 | detail-item    | string     | null: false       |
 | detail-value   | string     | null: false       |
+| weight-bold    | text       | null: false       |
+| sell           | text       | null: false       |
 | postage        | text       | null: false       |
 | user           | references | foreign_key: true |
 
@@ -48,3 +50,20 @@
 
 - belongs_to :item
 - belongs_to :user
+
+
+## address table
+
+| Column             | Type       | Options           |
+|--------------------|------------|-------------------|
+| postal-code        | reference  | foreign_key: true |
+| prefecture         | reference  | foreign_key: true |
+| city               | reference  | foreign_key: true |
+| house number       | reference  | foreign_key: true |
+| building-name      | reference  | foreign_key: true |
+| user               | references | foreign_key: true |
+
+## Association
+
+-
+-
