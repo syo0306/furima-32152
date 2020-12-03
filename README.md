@@ -21,18 +21,18 @@
 
 ## items table
 
-| Column                  | Type       | Options           |
-|-------------------------|------------|-------------------|
-| name                    | string     | null: false       |
-| price                   | integer    | null: false       |
-| detail_item             | text       | null: false       |
-| detail_value            | string     | null: false       |
-| weight-bold-text        | text       | null: false       |
-| item-sell               | text       | null: false       |
-| postage                 | text       | null: false       |
-| collection_select       | text       | null: false       |
-| item-scheduled-delivery | text       | null: false       |
-| user                    | references | foreign_key: true |
+| Column                         | Type       | Options           |
+|--------------------------------|------------|-------------------|
+| name                           | string     | null: false       |
+| price                          | integer    | null: false       |
+| detail_item_id                 | string     | null: false       |
+| detail_value_id                | string     | null: false       |
+| weight-bold-text_id            | string     | null: false       |
+| item-sell_id                   | string     | null: false       |
+| postage-id                     | string     | null: false       |
+| collection_select_id           | string     | null: false       |
+| item-scheduled-delivery-id     | string     | null: false       |
+| user                           | references | foreign_key: true |
 
 ### Association
 
@@ -57,15 +57,15 @@
 
 ## address table
 
-| Column             | Type       | Options           |
-|--------------------|------------|-------------------|
-| prefecture_id      | integer    |                   |
-| postal-code_id     | string     |                   |
-| city_id            | string     |                   |
-| address_id         | string     |                   |
-| house number_id    | string     |                   |
-| building_id        | string     |                   |
-| order              | string     |                   |
+| Column             | Type        | Options             |
+|--------------------|-------------|---------------------|
+| prefecture_id      | integer     |                     |
+| postal-code        | string      |                     |
+| city               | string      |                     |
+| address            | string      |                     |
+| house number       | string      |                     |
+| building           | string      |                     |
+| order              | references  | foreign_key: true   |
 
 ## Association
 
