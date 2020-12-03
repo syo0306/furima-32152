@@ -8,15 +8,13 @@
 | email                | string | null: false |
 | encrypted_password   | string | null: false |
 | first_name           | string | null: false |
-| first_name-kana      | string | null: false |
+| first_name_kana      | string | null: false |
 | last_name            | string | null: false |
-| last_name-kana       | string | null: false |
+| last_name_kana       | string | null: false |
 | birthday             | date   | null: false |
 
 ### Association
 
-* has_many :messages
-* has_many :address
 * has_many :items
 
 
@@ -27,7 +25,7 @@
 |-------------------------|------------|-------------------|
 | name                    | string     | null: false       |
 | price                   | integer    | null: false       |
-| detail_item             | string     | null: false       |
+| detail_item             | text       | null: false       |
 | detail_value            | string     | null: false       |
 | weight-bold-text        | text       | null: false       |
 | item-sell               | text       | null: false       |
@@ -61,16 +59,14 @@
 
 | Column             | Type       | Options           |
 |--------------------|------------|-------------------|
-| _id                | integer    | foreign_key: true |
-| postal-code        | reference  | foreign_key: true |
-| city               | reference  | foreign_key: true |
-| address            | reference  | foreign_key: true |
-| house number       | reference  | foreign_key: true |
-| building           | reference  | foreign_key: true |
-| order              | references | foreign_key: true |
+| prefecture_id      | integer    |                   |
+| postal-code_id     | string     |                   |
+| city_id            | string     |                   |
+| address_id         | string     |                   |
+| house number_id    | string     |                   |
+| building_id        | string     |                   |
+| order              | string     |                   |
 
 ## Association
 
-- belongs_to :user
-- belongs_to :item
 - belongs_to :order
