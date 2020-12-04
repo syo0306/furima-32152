@@ -25,28 +25,28 @@
 |--------------------------------|------------|-------------------|
 | name                           | string     | null: false       |
 | price                          | integer    | null: false       |
-| detail_item_id                 | string     | null: false       |
-| detail_value_id                | string     | null: false       |
-| weight-bold-text_id            | string     | null: false       |
-| item-sell_id                   | string     | null: false       |
-| postage-id                     | string     | null: false       |
-| collection_select_id           | string     | null: false       |
-| item-scheduled-delivery-id     | string     | null: false       |
+| detail_item_id                 | integer    | null: false       |
+| detail_value_id                | integer    | null: false       |
+| weight-bold-text_id            | integer    | null: false       |
+| item-sell_id                   | integer    | null: false       |
+| postage_id                     | integer    | null: false       |
+| collection_select_id           | integer    | null: false       |
+| item-scheduled-delivery-id     | integer    | null: false       |
 | user                           | references | foreign_key: true |
 
 ### Association
 
 - belongs_to :user 
-* has_many :order
+* has_one :order
 
 
 
 ## orders table
 
-| Column      | Type       | Options           |
-|-------------|------------|-------------------|
-| item        | reference  | foreign_key: true |
-| user        | references | foreign_key: true |
+| Column      | Type        | Options           |
+|-------------|-------------|-------------------|
+| item        | references  | foreign_key: true |
+| user        | references  | foreign_key: true |
 
 ## Association
 
@@ -59,11 +59,11 @@
 
 | Column             | Type        | Options             |
 |--------------------|-------------|---------------------|
-| prefecture_id      | integer     |                     |
-| postal-code        | string      |                     |
-| city               | string      |                     |
-| address            | string      |                     |
-| house number       | string      |                     |
+| prefecture_id      | integer     | null: false         |
+| postal_code        | string      | null: false         |
+| city               | string      | null: false         |
+| address            | string      | null: false         |
+| house number       | string      | null: false         |
 | building           | string      |                     |
 | order              | references  | foreign_key: true   |
 
