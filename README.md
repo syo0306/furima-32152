@@ -25,12 +25,12 @@
 | Column                         | Type       | Options           |
 |--------------------------------|------------|-------------------|
 | name                           | string     | null: false       |
-| price                          | integer    | null: false       |
-| detail_item                    | text       | null: false       |
-| detail_value_id                | integer    | null: false       |
-| item_scheduled_delivery_id     | integer    | null: false       |
-| postage_id                     | integer    | null: false       |
-| collection_select_id           | integer    | null: false       |
+| item_price                     | integer    | null: false       |
+| detail_item_id                 | text       | null: false       |
+| detail_value_id                | text       | null: false       |
+| item_scheduled_delivery_id     | text       | null: false       |
+| item_postage_id                | text       | null: false       |
+| collection_select_id           | text       | null: false       |
 | user                           | references | foreign_key: true |
 
 ### Association
@@ -54,7 +54,7 @@ item-sell
 - has_one :address
 
 
-## address table
+## addresses table
 
 | Column             | Type        | Options             |
 |--------------------|-------------|---------------------|
@@ -64,6 +64,7 @@ item-sell
 | address            | string      | null: false         |
 | house number       | string      | null: false         |
 | building           | string      |                     |
+| phone_number       | string      | null: false         |
 | order              | references  | foreign_key: true   |
 
 ## Association
