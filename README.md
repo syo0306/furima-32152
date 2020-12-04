@@ -28,11 +28,10 @@
 | price                          | integer    | null: false       |
 | detail_item_id                 | integer    | null: false       |
 | detail_value_id                | integer    | null: false       |
-| weight-bold-text_id            | integer    | null: false       |
-| item-sell_id                   | integer    | null: false       |
+| item-scheduled-delivery_id     | integer    | null: false       |
 | postage_id                     | integer    | null: false       |
 | collection_select_id           | integer    | null: false       |
-| item-scheduled-delivery-id     | integer    | null: false       |
+| item-sell                      | integer    | null: false       |
 | user                           | references | foreign_key: true |
 
 ### Association
@@ -40,7 +39,7 @@
 - belongs_to :user 
 * has_one :order
 
-
+item-sell                 
 
 ## orders table
 
