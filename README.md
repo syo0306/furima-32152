@@ -26,11 +26,11 @@
 |--------------------------------|------------|-------------------|
 | name                           | string     | null: false       |
 | item_price                     | integer    | null: false       |
-| detail_item_id                 | text       | null: false       |
-| detail_value_id                | text       | null: false       |
-| item_scheduled_delivery_id     | text       | null: false       |
+| category_id                    | text       | null: false       |
+| status_id                      | text       | null: false       |
 | item_postage_id                | text       | null: false       |
-| collection_select_id           | text       | null: false       |
+| area_id                        | text       | null: false       |
+| days_id                        | text       | null: false       |
 | user                           | references | foreign_key: true |
 
 ### Association
@@ -38,7 +38,6 @@
 - belongs_to :user 
 * has_one :order
 
-item-sell                 
 
 ## orders table
 
