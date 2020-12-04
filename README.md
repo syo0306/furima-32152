@@ -26,12 +26,11 @@
 |--------------------------------|------------|-------------------|
 | name                           | string     | null: false       |
 | price                          | integer    | null: false       |
-| detail_item_id                 | integer    | null: false       |
+| detail_item                    | text       | null: false       |
 | detail_value_id                | integer    | null: false       |
-| item-scheduled-delivery_id     | integer    | null: false       |
+| item_scheduled_delivery_id     | integer    | null: false       |
 | postage_id                     | integer    | null: false       |
 | collection_select_id           | integer    | null: false       |
-| item-sell                      | integer    | null: false       |
 | user                           | references | foreign_key: true |
 
 ### Association
