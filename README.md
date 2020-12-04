@@ -26,11 +26,11 @@
 |--------------------------------|------------|-------------------|
 | name                           | string     | null: false       |
 | item_price                     | integer    | null: false       |
-| category_id                    | text       | null: false       |
-| status_id                      | text       | null: false       |
-| item_postage_id                | text       | null: false       |
-| area_id                        | text       | null: false       |
-| days_id                        | text       | null: false       |
+| category_id                    | integer    | null: false       |
+| status_id                      | integer    | null: false       |
+| item_postage_id                | integer    | null: false       |
+| area_id                        | integer    | null: false       |
+| days_id                        | integer    | null: false       |
 | user                           | references | foreign_key: true |
 
 ### Association
@@ -57,7 +57,7 @@
 
 | Column             | Type        | Options             |
 |--------------------|-------------|---------------------|
-| prefecture_id      | integer     | null: false         |
+| area_id            | integer     | null: false         |
 | postal_code        | string      | null: false         |
 | city               | string      | null: false         |
 | address            | string      | null: false         |
